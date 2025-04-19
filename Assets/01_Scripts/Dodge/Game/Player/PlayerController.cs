@@ -16,16 +16,19 @@ namespace Dodge.Game.Player {
         [SerializeField]
         CapsuleCollider2D collider;
 
+        private Vector2 moveInput;
+
 
         public void OnMoveEvent(InputAction.CallbackContext context) {
-            Vector2 input = context.ReadValue<Vector2>();
+            moveInput = context.ReadValue<Vector2>();
 
-            if (!context.performed) {
-                input = Vector2.zero;
+            if (context.canceled) {
+                moveInput = Vector2.zero;
             }
+        }
 
-            Debug.Log(input);
-            r2d.AddForce(input * moveSpeed, ForceMode2D.Force);
+        private void FixedUpdate() {
+            r2d.linearVelocity = new Vector2(moveInput.x * moveSpeed, r2d.linearVelocity.y);
         }
     }
 }
