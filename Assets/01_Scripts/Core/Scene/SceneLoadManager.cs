@@ -35,6 +35,7 @@ namespace Core.Scene {
             payloadDic.Add(payloadKey, payload);
         }
         public void RemovePayload(string payloadKey) {
+            if (!payloadDic.ContainsKey(payloadKey)) return;
             payloadDic[payloadKey] = null;
             payloadDic.Remove(payloadKey);
         }

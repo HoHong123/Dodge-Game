@@ -12,10 +12,7 @@ namespace Util.Container {
 
             int n = collection.Count;
             while (n > 1) {
-                n--;
-
-                int k = rand.Next(n + 1);
-
+                int k = rand.Next(--n + 1);
                 T value = collection[k];
                 collection[k] = collection[n];
                 collection[n] = value;
