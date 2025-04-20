@@ -4,7 +4,16 @@ using UnityEngine.InputSystem;
 
 
 namespace Dodge.Game.Player {
-    public class PlayerController : MonoBehaviour {
+    /* Player Controller
+     * 1. Check physic
+     * 2. Control status (Hp, Speed, etc)
+     * 3. Control movement
+     * 4. Control animation
+     * 5. Control effects
+     * 6. Event handling
+     * 7. Preset handling
+     */
+    public partial class PlayerController : MonoBehaviour {
         [Title("Status")]
         [PropertyRange(0, 10)]
         [SerializeField]
