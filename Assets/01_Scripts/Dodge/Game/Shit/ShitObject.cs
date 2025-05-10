@@ -11,21 +11,19 @@ namespace Dodge.Game.Shit {
         [SerializeField]
         private List<string> validTags = new();
 
-
         public void OnSpawned() {
         }
 
         public void OnReturned() {
         }
 
-        private void SendDamage() {
-
+        private void DealDamage() {
         }
 
         private void OnCollisionEnter2D(Collision2D collision) {
             var tag = collision.transform.tag;
             switch (tag) {
-            case "Player": SendDamage(); break;
+            case "Player": DealDamage(); break;
             }
         }
     }
