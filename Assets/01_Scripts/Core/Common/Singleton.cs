@@ -1,5 +1,6 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
+using Sirenix.OdinInspector;
+using Util.Logger;
 
 
 public class Singleton<T> : SerializedMonoBehaviour where T : MonoBehaviour {
@@ -15,7 +16,10 @@ public class Singleton<T> : SerializedMonoBehaviour where T : MonoBehaviour {
                 if (instance == null) {
                     GameObject singletonObject = new GameObject();
                     instance = singletonObject.AddComponent<T>();
+#if UNITY_EDITOR
+                    HLogger.Error($"Singletone issue!!! {typeof(T).Name} is not found. Auto create activated.");
                     instance.name = $"AutoCreate_{typeof(T).Name}";
+#endif
                 }
             }
 

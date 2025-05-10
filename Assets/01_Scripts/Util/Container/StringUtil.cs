@@ -33,10 +33,19 @@ namespace Util.Container {
             return decodedString;
         }
 
+        /// <summary>
+        /// Formats the given formattable value by inserting a comma(',')
+        /// as a thousands separator every three digits.
+        /// </summary>
         public static string FormatNumber<T>(T number) where T : struct, IFormattable {
             return number.ToString("N0", null);
         }
 
+        /// <summary>
+        /// Converts a numeric value into a shortened string representation with units 
+        /// such as K (thousand), M (million), B (billion), or T (trillion),
+        /// or their Korean equivalents like 천, 백만, 십억, 조.
+        /// </summary>
         public static string NumToAlpha<T>(T number, bool useRound = false, bool useKoreanUnit = false) where T : struct, IConvertible {
             double num = Convert.ToDouble(number);
 
