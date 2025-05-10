@@ -17,7 +17,10 @@ namespace Core.Scene {
             object payload = payloadDic[key];
 
             if (payload.GetType() != typeof(T)) {
-                HLogger.Error("Payload casting fail", $"Payload Type [{payload.GetType()}]\n, Input Type [{typeof(T).FullName}]");
+                HLogger.Error(
+                    "Payload casting fail",
+                    false,
+                    $"Payload Type [{payload.GetType()}]\n, Input Type [{typeof(T).FullName}]");
                 return null;
             }
 
