@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace Util.Container {
     public class Pooling<T> where T : Component {
-        T prefab;
-        Queue<T> pool = new Queue<T>();
-        Transform parent;
+        readonly T prefab;
+        readonly Queue<T> pool = new Queue<T>();
+        readonly Transform parent;
 
         public Pooling(T prefab, int initialSize = 10, Transform parent = null) {
             this.prefab = prefab;
@@ -19,9 +19,10 @@ namespace Util.Container {
             }
         }
 
+
         public T Get() {
             if (pool.Count == 0) {
-                _AddObjects(1);
+                _AddNewObjects(1);
             }
 
             T obj = pool.Dequeue();
@@ -39,11 +40,11 @@ namespace Util.Container {
                 poolable.OnReturned();
             }
 
-            obj.gameObject.SetActive(false);
             pool.Enqueue(obj);
         }
 
-        private void _AddObjects(int count) {
+
+        private void _AddNewObjects(int count) {
             for (int i = 0; i < count; i++) {
                 T obj = GameObject.Instantiate(prefab, parent);
                 obj.gameObject.SetActive(false);
