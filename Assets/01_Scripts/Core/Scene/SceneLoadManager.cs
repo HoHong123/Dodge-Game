@@ -1,15 +1,21 @@
-using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Util.Logger;
+using Sirenix.OdinInspector;
 
 
 namespace Core.Scene {
     public class SceneLoadManager : Singleton<SceneLoadManager> {
-        public Action OnSceneLoad;
-        private Dictionary<string, object> payloadDic;
+        [Title("Payload")]
+        [SerializeField]
+        [DictionaryDrawerSettings(DisplayMode = DictionaryDisplayOptions.ExpandedFoldout)]
+        private Dictionary<string, object> payloadDic = new();
+
+        public Action StartSceneLoad { get; set; }
+        public Action EndOnSceneLoad { get; set; }
 
 
         #region Payload
@@ -46,6 +52,13 @@ namespace Core.Scene {
 
         #region Load Scene
         public void LoadSceneAsync(SceneList sceneList) => LoadSceneAsync((int)sceneList);
+        public void LoadSceneAsync(string sceneName) {
+            if (Enum.IsDefined(typeof(SceneList), sceneName)) {
+                HLogger.Exception(new IndexOutOfRangeException(), "SceneLoadManager");
+                return;
+            }
+            LoadSceneAsync((int)Enum.Parse(typeof(SceneList), sceneName));
+        }
         public void LoadSceneAsync(int sceneList) {
             _LoadScene(sceneList);
         }
@@ -53,10 +66,12 @@ namespace Core.Scene {
         private async void _LoadScene(int sceneList) {
             AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneList);
 
-            OnSceneLoad?.Invoke();
+            StartSceneLoad?.Invoke();
 
             await UniTask.WaitUntil(() => asyncLoad.isDone);
             HLogger.Log($"Scene loaded [{sceneList.ToString()}]");
+
+            EndOnSceneLoad?.Invoke();
 
             await Resources.UnloadUnusedAssets();
             HLogger.Log("Scene asset clear complete");
