@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Dodge.UI.Popup;
+using Sirenix.OdinInspector;
 
 
 namespace Util.Logger {
@@ -82,18 +83,18 @@ namespace Util.Logger {
             // ...
         }
 
-        public static void Exception(Exception ex) {
-            string log = $"@4 [{UtcNow}] {ex.Message}";
+        public static void Exception(Exception ex, string extra = "") {
+            string log = $"@4 [{UtcNow}] {extra} :: {ex.Message}";
 
 #if UNITY_EDITOR
-            Debug.LogException(ex);
+            Debug.LogError(log);
 #endif
 
             FATAL_QUE.Enqueue(log);
         }
 
-        public static void Throw(Exception ex) {
-            Exception(ex);
+        public static void Throw(Exception ex, string extra = "") {
+            Exception(ex, extra);
             throw ex;
         }
     }
