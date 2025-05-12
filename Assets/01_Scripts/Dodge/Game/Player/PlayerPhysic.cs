@@ -8,7 +8,7 @@ namespace Dodge.Game.Player {
      * 1. Check physic
      * 3. Control movement
      */
-    public partial class PlayerController : MonoBehaviour {
+    public partial class PlayerPhysic : MonoBehaviour {
 
     }
 }

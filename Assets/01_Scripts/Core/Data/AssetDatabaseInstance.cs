@@ -42,8 +42,10 @@ namespace Core.Data {
             string path = UnityEditor.EditorUtility.SaveFilePanel("Create Assets", "Assets", typeof(T).Name, "asset");
             if (!path.StartsWith(Application.dataPath))
                 return;
+
             path = path.Replace(Application.dataPath, "Assets");
             HLogger.Log(path);
+
             try {
                 instance.isLoadedFromAsset = true;
                 UnityEditor.AssetDatabase.CreateAsset(instance, path);

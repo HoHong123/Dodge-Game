@@ -1,5 +1,5 @@
 public enum SceneList {
-    Lobby = 100100,
+    Lobby,
 
-    Game = 200100,
+    Game,
 }
