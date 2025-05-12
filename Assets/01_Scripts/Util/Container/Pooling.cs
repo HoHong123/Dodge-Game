@@ -5,8 +5,11 @@ using UnityEngine;
 namespace Util.Container {
     public class Pooling<T> where T : Component {
         readonly T prefab;
-        readonly Queue<T> pool = new Queue<T>();
+        readonly Queue<T> pool = new();
         readonly Transform parent;
+
+        public int AvaliableCount => pool.Count;
+
 
         public Pooling(T prefab, int initialSize = 10, Transform parent = null) {
             this.prefab = prefab;
