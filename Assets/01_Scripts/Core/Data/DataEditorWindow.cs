@@ -18,7 +18,10 @@ namespace Core.Data {
             var tree = new OdinMenuTree();
 
             tree.Add("1. Sample", GameDataExample.Instance);
-            tree.AddAllAssetsAtPath("1. Sample", GameDataExample.Instance.ScriptablesPath, typeof(GameDataExampleSample), true, true);
+            tree.AddAllAssetsAtPath("1. Sample", GameDataExample.Instance.ScriptablesPath, typeof(GameDataSample), true, true);
+
+            tree.Add("2. Test", TestDataExample.Instance);
+            tree.AddAllAssetsAtPath("2. Test", TestDataExample.Instance.ScriptablesPath, typeof(TestDataSample), true, true);
 
             tree.SortMenuItemsByName(false);
 
