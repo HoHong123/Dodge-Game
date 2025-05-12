@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using DG.Tweening;
 using Sirenix.OdinInspector;
 
 namespace Dodge.UI.Popup {
@@ -17,22 +16,21 @@ namespace Dodge.UI.Popup {
         Button closeBtn;
 
 
+        private void Start() {
+            closeBtn.onClick.AddListener(_OnClickClose);
+        }
+
+
         public void Init(string title, string message) {
             titleTxt.text = title;
             descriptionTxt.text = message;
-
             closeBtn.interactable = true;
-            transform.DOScale(1, 0.6f).SetEase(Ease.InOutExpo);
         }
 
-        public void OnClickClose() {
+
+        private void _OnClickClose() {
             closeBtn.interactable = false;
-            transform.
-                DOScale(0, 0.6f).
-                SetEase(Ease.InOutExpo).
-                OnComplete(() => {
-                    PopupManager.Instance.OnAlertClose(this);
-                });
+            PopupManager.Instance.OnAlertClose(this);
         }
     }
 }
