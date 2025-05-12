@@ -6,7 +6,7 @@ using Newtonsoft.Json.Linq;
 using Sirenix.OdinInspector;
 
 namespace Dodge.Data {
-    public class GameDataExample : ExcelExtractor<GameDataExample> {
+    public class TestDataExample : ExcelExtractor<TestDataExample> {
         [FolderPath(AbsolutePath = false)]
         [HorizontalGroup("Group")]
         [BoxGroup("Group/Scriptables Path")]
@@ -14,32 +14,11 @@ namespace Dodge.Data {
         private string scriptablesPath; // Scriptable datas path
         public string ScriptablesPath => scriptablesPath;
 
-        [FolderPath]
-        [BoxGroup("Icon Path")]
-        [SerializeField, HideLabel]
-        private string iconPath; // Icon resources path
-        public string IconPath => iconPath;
-
-        [FolderPath]
-        [BoxGroup("Prefab Path")]
-        [SerializeField, HideLabel]
-        private string prefabPath; // Prefab resources path
-        public string PrefabPath => prefabPath;
-
-        protected override string[] keys => 
+        protected override string[] keys =>
             new string[] {
                     "id",
-                    "isBoss",
-                    "monsterId",
-                    "hp",
-                    "atk",
-                    "rewardId",
-                    "rewardValue",
                     "description",
-                    "exp",
                     "result",
-                    "iconPath",
-                    "prefabPath"
             };
 
 
@@ -47,7 +26,7 @@ namespace Dodge.Data {
             var arr = ExcelToJson();
 
             foreach (var json in arr) {
-                var data = GameDataSample.FromJson(json, iconPath, prefabPath);
+                var data = TestDataSample.FromJson(json);
                 AssetDatabase.CreateAsset(data, $"{ScriptablesPath}/{data.Id}.asset");
             }
         }
@@ -57,11 +36,11 @@ namespace Dodge.Data {
             var files = Directory.GetFiles(ScriptablesPath, "*.asset", SearchOption.TopDirectoryOnly);
 
             foreach (var file in files) {
-                var sample = AssetDatabase.LoadAssetAtPath<GameDataSample>(file);
+                var sample = AssetDatabase.LoadAssetAtPath<TestDataSample>(file);
                 arr.Add(sample.ToJson());
             }
 
-            JsonToExcel(arr, "ExampleSample");
+            JsonToExcel(arr, "TestDataSample");
         }
     }
 }

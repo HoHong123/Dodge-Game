@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15ff28c37244d26438d65a158fc84c24, type: 3}
+  m_Name: TestDataExample
+  m_EditorClassIdentifier: 
+  excelPath: Assets/02_Resources/Data/Data.xlsx
+  sheetName: TestSample
+  scriptablesPath: Assets/02_Resources/Data/TestSample/SampleDatas
