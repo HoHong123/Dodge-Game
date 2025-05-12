@@ -64,17 +64,15 @@ namespace Dodge.UI.Popup {
 
 
         public void AddLog(string title, string message) {
-            background.SetActive(true);
-
             HLogger.Log($"{title} :: {message}");
             logPool.Enqueue((title, message));
+            background.SetActive(true);
             _ShowLog();
         }
 
         public void AddAlert(string title, string message, bool debug = false) {
-            background.SetActive(true);
-
             alertPool.Enqueue((title, message));
+            background.SetActive(true);
             _ShowAlert();
 
             if (debug) {
