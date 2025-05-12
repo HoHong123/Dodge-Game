@@ -27,9 +27,13 @@ public class Singleton<T> : SerializedMonoBehaviour where T : MonoBehaviour {
         }
     }
 
-    private void Awake() {
+    protected virtual void Awake() {
+        if (instance != null) {
+            DestroyImmediate(this);
+            return;
+        }
         if (dontDestroy) {
-            DontDestroyOnLoad(instance.gameObject);
+            DontDestroyOnLoad(this);
         }
     }
 }
