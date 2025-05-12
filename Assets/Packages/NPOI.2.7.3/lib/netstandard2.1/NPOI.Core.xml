@@ -41072,7 +41072,7 @@
         <member name="T:NPOI.SS.UserModel.IChart">
              High level representation of a chart.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="P:NPOI.SS.UserModel.IChart.ChartDataFactory">
             @return an appropriate ChartDataFactory implementation
@@ -41125,7 +41125,7 @@
         <member name="T:NPOI.SS.UserModel.Charts.AxisCrossBetween">
               Specifies the possible crossing states of an axis.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.SS.UserModel.Charts.AxisCrossBetween.Between">
             Specifies the value axis shall cross the category axis
@@ -41138,7 +41138,7 @@
         <member name="T:NPOI.SS.UserModel.Charts.AxisCrosses">
              Specifies the possible crossing points for an axis.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.SS.UserModel.Charts.AxisCrosses.AutoZero">
             The category axis crosses at the zero point of the value axis (if
@@ -41154,7 +41154,7 @@
         <member name="T:NPOI.SS.UserModel.Charts.AxisOrientation">
              Specifies the possible ways to place a picture on a data point, series, wall, or floor.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.SS.UserModel.Charts.AxisOrientation.MaxToMin">
             Specifies that the values on the axis shall be reversed
@@ -41167,7 +41167,7 @@
         <member name="T:NPOI.SS.UserModel.Charts.AxisPosition">
              Enumeration of all possible axis positions.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="T:NPOI.SS.UserModel.Charts.IBarChartData`2">
             <summary>
@@ -41196,7 +41196,7 @@
         <member name="T:NPOI.SS.UserModel.Charts.IChartAxis">
              High level representation of chart axis.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="P:NPOI.SS.UserModel.Charts.IChartAxis.Id">
             @return axis id
@@ -41252,7 +41252,7 @@
             <summary>
             A factory for different chart axis.
             </summary>
-            <remarks>@author Roman Kashitsyn</remarks>
+            <remarks>@author Roman Kapoopsyn</remarks>
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.IChartAxisFactory.CreateValueAxis(NPOI.SS.UserModel.Charts.AxisPosition)">
             <summary>
@@ -41266,7 +41266,7 @@
             A base for all chart data types.
             </summary>
             <remarks>
-            @author  Roman Kashitsyn
+            @author  Roman Kapoopsyn
             </remarks>
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.IChartData.FillChart(NPOI.SS.UserModel.IChart,NPOI.SS.UserModel.Charts.IChartAxis[])">
@@ -41281,7 +41281,7 @@
             A factory for different chart data types.
             </summary>
             <remarks>
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
             </remarks>
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.IChartDataFactory.CreateScatterChartData``2">
@@ -41325,7 +41325,7 @@
             <summary>
             High level representation of chart legend.
             </summary>
-            <remarks>@author Roman Kashitsyn</remarks>
+            <remarks>@author Roman Kapoopsyn</remarks>
         </member>
         <member name="P:NPOI.SS.UserModel.Charts.IChartLegend.Position">
             <summary>
@@ -41392,7 +41392,7 @@
             Specifies the possible ways to store a chart element's position.
             </summary>
             <remarks>
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
             </remarks>
         </member>
         <member name="F:NPOI.SS.UserModel.Charts.LayoutMode.Edge">
@@ -41411,7 +41411,7 @@
             and axis labels) or outside (including axis and axis labels).
             </summary>
             <remarks>
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
             </remarks>
         </member>
         <member name="F:NPOI.SS.UserModel.Charts.LayoutTarget.Inner">
@@ -41431,7 +41431,7 @@
             Enumeration of all possible chart legend positions.
             </summary>
              <remarks>
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
              </remarks>
         </member>
         <member name="T:NPOI.SS.UserModel.Charts.ILineChartData`2">
@@ -41453,7 +41453,7 @@
         <member name="T:NPOI.SS.UserModel.Charts.IManualLayout">
              High level representation of chart element manual layout.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.IManualLayout.SetTarget(NPOI.SS.UserModel.Charts.LayoutTarget)">
             Sets the layout target.
@@ -41543,7 +41543,7 @@
              Abstraction of chart element that can be positioned with manual
              layout.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.ManuallyPositionable.GetManualLayout">
             Returns manual layout for the chart element.
@@ -41590,7 +41590,7 @@
         </member>
         <member name="T:NPOI.SS.UserModel.Charts.IScatterChartSeries`2">
             Represents scatter charts serie.
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.IScatterChartSeries`2.GetXValues">
             @return data source used for X axis values
@@ -41599,7 +41599,7 @@
             @return data source used for Y axis values
         </member>
         <member name="T:NPOI.SS.UserModel.Charts.IValueAxis">
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.UserModel.Charts.IValueAxis.GetCrossBetween">
             @return cross between type
@@ -46821,7 +46821,7 @@
         </member>
         <member name="T:NPOI.SS.Util.CellWalk.ICellHandler">
             Represents callback for CellWalk traverse method.  
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.Util.CellWalk.ICellHandler.OnCell(NPOI.SS.UserModel.ICell,NPOI.SS.Util.CellWalk.ICellWalkContext)">
             @param cell current cell
@@ -46830,7 +46830,7 @@
         <member name="T:NPOI.SS.Util.CellWalk.CellWalk">
              Traverse cell range.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.Util.CellWalk.CellWalk.IsTraverseEmptyCells">
             Should we call handler on empty (blank) cells. Default is
@@ -46848,10 +46848,10 @@
         </member>
         <member name="T:NPOI.SS.Util.CellWalk.CellWalk.SimpleCellWalkContext">
             Inner class to hold walk context.
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="T:NPOI.SS.Util.CellWalk.ICellWalkContext">
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="P:NPOI.SS.Util.CellWalk.ICellWalkContext.OrdinalNumber">
              Returns ordinal number of cell in range.  Numeration starts
@@ -46878,7 +46878,7 @@
         <member name="T:NPOI.SS.Util.DataMarker">
             <summary>
             Represents data marker used in charts.
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
             </summary>
         </member>
         <member name="M:NPOI.SS.Util.DataMarker.#ctor(NPOI.SS.UserModel.ISheet,NPOI.SS.Util.CellRangeAddress)">
@@ -47596,7 +47596,7 @@
              from 2D array of Objects. It can be used in test cases to improve code
              readability or in Swing applications with tables.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.SS.Util.SheetBuilder.GetCreateEmptyCells">
              Returns {@code true} if null array elements should be treated as empty

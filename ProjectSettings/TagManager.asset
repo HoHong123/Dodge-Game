@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
+  - Ground
+  - Poop
   - Shit
   layers:
   - Default
@@ -41,6 +43,12 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Game
+    uniqueID: 3670194699
+    locked: 0
+  - name: UI
+    uniqueID: 34742047
     locked: 0
   m_RenderingLayers:
   - Default

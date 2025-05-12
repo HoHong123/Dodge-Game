@@ -3030,10 +3030,10 @@
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFChartAxis">
              Base class for all axis types.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFChartDataFactory">
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.XSSF.UserModel.Charts.XSSFChartDataFactory.CreateScatterChartData``2">
             @return new scatter chart data instance
@@ -3043,7 +3043,7 @@
         </member>
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFChartLegend">
             Represents a SpreadsheetML chart legend
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.XSSF.UserModel.Charts.XSSFChartLegend.legend">
             Underlaying CTLagend bean
@@ -3062,7 +3062,7 @@
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFChartUtil">
              Package private class with utility methods.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.XSSF.UserModel.Charts.XSSFChartUtil.BuildAxDataSource``1(NPOI.OpenXmlFormats.Dml.Chart.CT_AxDataSource,NPOI.SS.UserModel.Charts.IChartDataSource{``0})">
             Builds CTAxDataSource object content from POI ChartDataSource.
@@ -3096,7 +3096,7 @@
         </member>
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFManualLayout">
             Represents a SpreadsheetML manual layout.
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.XSSF.UserModel.Charts.XSSFManualLayout.layout">
             Underlaying CTManualLayout bean.
@@ -3129,7 +3129,7 @@
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFScatterChartData`2">
              Represents DrawingML scatter chart.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.XSSF.UserModel.Charts.XSSFScatterChartData`2.series">
             List of all data series.
@@ -3151,7 +3151,7 @@
         <member name="T:NPOI.XSSF.UserModel.Charts.XSSFValueAxis">
              Value axis type.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="T:NPOI.XSSF.UserModel.Extensions.XSSFCellAlignment">
             Cell Settings avaiable in the Format/Alignment tab
@@ -4414,7 +4414,7 @@
         <member name="T:NPOI.XSSF.UserModel.XSSFChart">
             Represents a SpreadsheetML Chart
             @author Nick Burch
-            @author Roman Kashitsyn
+            @author Roman Kapoopsyn
         </member>
         <member name="F:NPOI.XSSF.UserModel.XSSFChart.frame">
             Parent graphic frame.
@@ -5665,7 +5665,7 @@
         <member name="T:NPOI.XSSF.UserModel.XSSFGraphicFrame">
              Represents DrawingML GraphicalObjectFrame.
             
-             @author Roman Kashitsyn
+             @author Roman Kapoopsyn
         </member>
         <member name="M:NPOI.XSSF.UserModel.XSSFGraphicFrame.#ctor(NPOI.XSSF.UserModel.XSSFDrawing,NPOI.OpenXmlFormats.Dml.Spreadsheet.CT_GraphicalObjectFrame)">
              Construct a new XSSFGraphicFrame object.
