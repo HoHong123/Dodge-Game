@@ -74,10 +74,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Personal Assets
-/[Aa]ssets/[Pp]lugins/AllIn1SpriteShader
-/[Aa]ssets/[Pp]lugins/CodeStage
-/[Aa]ssets/[Pp]lugins/Demigiant
-/[Aa]ssets/[Pp]lugins/Easy\ Save3
-/[Aa]ssets/[Pp]lugins/Sirenix
-/[Aa]ssets/03_ThirdParty/StompyRobot
-/[Aa]ssets/03_ThirdParty/vFolders
+# /[Aa]ssets/[Pp]lugins/AllIn1SpriteShader
+# /[Aa]ssets/[Pp]lugins/CodeStage
+# /[Aa]ssets/[Pp]lugins/Demigiant
+# /[Aa]ssets/[Pp]lugins/Easy\ Save3
+# /[Aa]ssets/[Pp]lugins/Sirenix
+# /[Aa]ssets/03_ThirdParty/StompyRobot
+# /[Aa]ssets/03_ThirdParty/vFolders
